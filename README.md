@@ -30,9 +30,17 @@
 
 `npm run start`
 
+## Testing
+
+for testing use comand :
+in windows `set NODE_OPTIONS=--experimental-vm-modules && npx jes`
+in linux or mac `NODE_OPTIONS=--experimental-vm-modules && npx jes`
+
 ## Postman endpoints Test
 
 you can import the [file](htthttps://github.com/jac9325/assesment_backEnd/blob/master/api-favs.postman_collection.jsonp:// "file") in postman to test the endpoints
+
+This project is deployed on heroku at: https://app-assesment-back.herokuapp.com/
 
 # Questions
 

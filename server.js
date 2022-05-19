@@ -15,7 +15,7 @@ mongoose.connection.on("error", function (e) {
   console.error("Connection error", e);
 });
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 
 // Launch server
 app.listen(PORT, () => {
