@@ -32,6 +32,6 @@ app.use("/api", FavRouter);
 const PORT = process.env.PORT || 4000;
 
 // Launch server
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   console.log("Initialize server!!");
 });
