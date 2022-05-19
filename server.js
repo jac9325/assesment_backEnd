@@ -1,7 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-
-import { UserRouter, FavRouter } from "./routes/index.js";
+import app from "./app/app.js";
 
 import "dotenv/config";
 /**
@@ -16,11 +15,6 @@ mongoose.connection.on("error", function (e) {
   console.error("Connection error", e);
 });
 
-/**
- * Express
- */
-const app = express();
-
 //Midleware
 app.use(express.json());
 
@@ -29,12 +23,15 @@ app.get("/", (request, response) => {
   response.send("Hola!!! API FAVS");
 });
 
+//rutas para el test
+app.get("/api/user/uri", getAllUsers);
+
 app.use("/api", UserRouter);
 app.use("/api", FavRouter);
 
 const PORT = process.env.PORT || 4000;
 
 // Launch server
-app.listen(4000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Initialize server!!");
 });

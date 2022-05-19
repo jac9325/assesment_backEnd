@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --verbose",
     "start": "nodemon server.js"
   },
   "author": "",
@@ -14,11 +14,23 @@
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "jest": "^28.1.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "cross-env": "^7.0.3",
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.16",
+    "supertest": "^6.2.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!variables/.*)"
+    ]
   }
 }
