@@ -1,8 +1,6 @@
 import express from "express";
 import { UserCtrl } from "../controllers/index.js";
-
 import { UserRouter, FavRouter } from "../routes/index.js";
-
 const { getAllUsers } = UserCtrl;
 
 /**

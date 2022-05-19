@@ -15,20 +15,6 @@ mongoose.connection.on("error", function (e) {
   console.error("Connection error", e);
 });
 
-//Midleware
-app.use(express.json());
-
-//Routes
-app.get("/", (request, response) => {
-  response.send("Hola!!! API FAVS");
-});
-
-//rutas para el test
-app.get("/api/user/uri", getAllUsers);
-
-app.use("/api", UserRouter);
-app.use("/api", FavRouter);
-
 const PORT = process.env.PORT || 4000;
 
 // Launch server
